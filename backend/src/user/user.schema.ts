@@ -1,6 +1,6 @@
 import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose";
 import * as mongoose from "mongoose";
-import { HydratedDocument } from "mongoose";
+import { HydratedDocument, Model, Document } from "mongoose";
 
 export type SkillDocument = HydratedDocument<Skill>;
 export type ExperienceDocument = HydratedDocument<Experience>;
@@ -70,3 +70,4 @@ export class User {
    
 }
 
+export const UserSchema = SchemaFactory.createForClass(User);

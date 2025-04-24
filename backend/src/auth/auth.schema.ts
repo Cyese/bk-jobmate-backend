@@ -18,12 +18,14 @@ export class Authentication {
     Password: string;
 
 
-    @Prop({raw:{
-        Token: {type: String},
-        IDP: {type: String}
-        }, 
-    required: false })
-    OAuth: Record<string, any>;
+    @Prop({
+        type: {
+            Token: { type: String },
+            IDP: { type: String }
+        },
+        required: false
+    })
+    OAuth: { Token: string; IDP: string };
 }
 
 export const AuthenticationSchema = SchemaFactory.createForClass(Authentication);
