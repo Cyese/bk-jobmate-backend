@@ -9,9 +9,10 @@ import { AuthService } from './auth/auth.service';
 import { AuthController } from './auth/auth.controller';
 import { CourseModule } from './course/course.module';
 import { ScheduleModule } from './schedule/schedule.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [DatabaseModule, ConfigModule, UserModule, CourseModule, ScheduleModule],
+  imports: [DatabaseModule, ConfigModule, UserModule, CourseModule, ScheduleModule, AuthModule],
   controllers: [AppController, AuthController],
   providers: [AppService, AuthenService, AuthService],
 })
